@@ -1,0 +1,133 @@
+<html>
+    <style>
+        *{
+            vertical-align: top;
+        }
+        code {
+            background: #bbb;
+            padding: 5px;
+        }
+        .block, .inline-block, .float-box, .card{
+            border: solid 1px black;
+            background: #aaa;
+            margin-bottom: 10px;
+        }
+        .inline-block {
+            display: inline-block;
+        }
+        .float-box {
+            overflow: hidden;
+            text-align: center;
+        }
+        .float-box .left-btn, .float-box .right-btn{
+            background-color: #f24;
+            border: 1px #fff solid;
+            padding: 10px;
+        }
+        .float-box .left-btn {
+            float: left;
+        }
+        .float-box .right-btn {
+            float: right;
+        }
+
+        .card{
+            width: 40%;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .rects .rect{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        .rect.rect1{
+            background-color: blue;
+        }
+        .rect.rect2{
+            background-color: red;
+        }
+        .rect.rect3{
+            background-color: green;
+        }
+
+        .cardStatic .rect2{
+            position: static;
+            left: 50px;
+            top: 50px;
+        }
+
+        .cardRelative .rect2{
+            position: relative;
+            left: 30px;
+            top: 30px;
+        }
+        .cardAbsolute{
+            position: relative;
+        }
+        .cardAbsolute .rect2{
+            position: absolute;
+            left: 150px;
+            top: 50px;
+        }
+        .cardFixed .rect2{
+            position: fixed;
+            right: 450px;
+            bottom: 50px;
+        }
+    </style>
+    <body>
+        <h1>CSS Position and Arrange Traning</h1>
+        <hr>
+        <h2>Display</h2>
+        <h4>block</h4>
+        <div class="block">Default block is full line.</div>
+        <h4>inline-block</h4>
+        <div class="inline-block">inline-block 1 automatic fit</div>
+        <div class="inline-block">inline-block 2</div>
+        <div class="inline-block">inline-block 3</div>
+        <div class="inline-block">inline-block 4</div>
+        <div class="inline-block">inline-block 5</div>
+        <h4>float</h4>
+        <div class="float-box">
+            Float Box <code>overflow: hidden</code> it will make the box height the same with float element.
+            <div class="left-btn">Left Button</div>
+            <div class="right-btn">Right Button1</div>
+            <div class="right-btn">Right Button2</div>
+        </div>
+        <h2>Position</h2>
+        <div class="card">
+            <h4><code>position: static;</code> is not positioned in any special way.</h4>
+            <div class="rects">
+                <div class="rect rect1"></div>
+                <div class="rect rect2"></div>
+                <div class="rect rect3"></div>
+            </div>
+        </div>
+        <div class="card cardRelative">
+            <h4><code>position: relative;</code>  is positioned relative to its normal position.</h4>
+            <div class="rects">
+                <div class="rect rect1"></div>
+                <div class="rect rect2"></div>
+                <div class="rect rect3"></div>
+            </div>
+        </div>
+        <div class="card cardAbsolute">
+            <h4><code>position: absolute;</code>is positioned relative to the nearest positioned ancestor </h4>
+            <div class="rects">
+                <div class="rect rect1"></div>
+                <div class="rect rect2"></div>
+                <div class="rect rect3"></div>
+            </div>
+        </div>
+        <div class="card cardFixed">
+            <h4><code>position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</h4>
+            <div class="rects">
+                <div class="rect rect1"></div>
+                <div class="rect rect2">fixed</div>
+                <div class="rect rect3"></div>
+            </div>
+        </div>
+    </body>
+</html>
